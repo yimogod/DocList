@@ -2,3 +2,5 @@
 /UboxTool/bin
 /UboxTool/obj
 /UboxTool/publish
+/UboxClient/node_modules
+/UboxClient/dist
