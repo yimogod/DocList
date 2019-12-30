@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ubox", "Ubox.csproj", "{E4D1C48B-F74D-4A06-AD2D-B28C80E64E5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4D1C48B-F74D-4A06-AD2D-B28C80E64E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D1C48B-F74D-4A06-AD2D-B28C80E64E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D1C48B-F74D-4A06-AD2D-B28C80E64E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D1C48B-F74D-4A06-AD2D-B28C80E64E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89AB9CD5-8A1E-4D83-9F5C-2FFC93D59411}
+	EndGlobalSection
+EndGlobal
