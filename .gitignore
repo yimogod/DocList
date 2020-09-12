@@ -5,3 +5,4 @@
 /UboxClient/node_modules
 /UboxClient/dist
 .idea/
+.DS_Store
