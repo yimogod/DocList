@@ -18,14 +18,9 @@ func InitializeRoutes() {
 		v1.POST("/delete", ubox.RequestDelete)
 	}
 
-	//router.Static("/bak", "./bak")
-	//router.Static("/upload", "./upload")
 	router.StaticFS("/bak", http.Dir("./bak"))
 	router.StaticFS("/upload", http.Dir("./upload"))
-
-	// Disable Console Color
-	// gin.DisableConsoleColor()
-
+	
 	// Ping test
 	router.GET("/ping", func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")

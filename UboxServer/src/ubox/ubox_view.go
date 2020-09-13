@@ -9,7 +9,7 @@ import (
 	"gopkg.in/mgo.v2/bson"
 )
 
-//获取ubox统计数据的概览
+//获取 ubox 统计数据的概览
 func RequestSummaryList(c *gin.Context) {
 	list := FilterUboxField(c, Collection_User, "", "", false)
 	c.JSONP(http.StatusOK, list)
@@ -25,7 +25,7 @@ func RequestDetail(c *gin.Context) {
 //修改或者创建
 func RequestEdit(c *gin.Context) {
 	uboxID := c.Params.ByName("id")
-	log.Println("in uers id is ", uboxID)
+	log.Println("in users id is ", uboxID)
 
 	col := db.C(Collection_User)
 	user := UboxUser{}
@@ -54,17 +54,17 @@ func RequestEdit(c *gin.Context) {
 		if d == nil {
 			user.Id_ = bson.NewObjectId()
 			col.Insert(user)
-			log.Println("create uers success ", user.Id_, user.Name)
+			log.Println("create custom success ", user.Id_, user.Name)
 		} else {
 			user.Id_ = d.Id_
 			col.UpdateId(user.Id_, &user)
-			log.Println("edit uers success ", user.Id_, user.Name)
+			log.Println("edit custom success ", user.Id_, user.Name)
 		}
 	} else {
 		user.Id_ = bson.NewObjectId()
 		col.Insert(user)
 		op = 1
-		log.Println("create uers success ", user.Id_, user.Name)
+		log.Println("create users success ", user.Id_, user.Name)
 	}
 
 	c.JSON(http.StatusOK, gin.H{"status": 200, "op": op, "content": "success"})
@@ -87,6 +87,6 @@ func RequestDelete(c *gin.Context) {
 		}
 	}
 
-	log.Println("delete uers success ", ids)
+	log.Println("delete users success ", ids)
 	c.JSON(http.StatusOK, gin.H{"status": 200, "content": "success"})
 }
