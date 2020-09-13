@@ -22,7 +22,7 @@ func ConnecToDB() {
 		//阿里云
 		//dbPath = "ubox.iyimo.net:27017"
 		//家里的mac
-		//dbPath = "192.168.1.107:27017"
+		dbPath = "127.0.0.1:27017"
 	}
 
 	mongo, err := mgo.Dial(dbPath)

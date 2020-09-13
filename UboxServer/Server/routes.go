@@ -2,7 +2,7 @@ package main
 
 import (
 	"net/http"
-	"seasun/ubox"
+	"github.com/yimogod/ubox"
 
 	"github.com/gin-gonic/gin"
 )

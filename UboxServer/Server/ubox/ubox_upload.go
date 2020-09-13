@@ -39,7 +39,7 @@ func RequestExcelOverride(c *gin.Context) {
 		return
 	}
 
-	rowsArr, _ := f.GetRows(sheetName)
+	rowsArr := f.GetRows(sheetName)
 	log.Println("import excel has rows ")
 	log.Println(len(rowsArr))
 
@@ -87,7 +87,7 @@ func RequestExcelUpdate(c *gin.Context) {
 		fmt.Println(err)
 		c.JSONP(http.StatusOK, gin.H{"status": 504, "content": "saved file ./frances_upload.xlsx not exist"})
 	}
-	rowsArr, _ := f.GetRows(sheetName)
+	rowsArr := f.GetRows(sheetName)
 	log.Println("import excel has rows num: ", len(rowsArr))
 
 	var updatedUsers []UboxUser
