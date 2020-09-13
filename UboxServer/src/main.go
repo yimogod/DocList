@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/yimogod/ubox"
 	"github.com/gin-gonic/gin"
+	"github.com/yimogod/ubox"
 )
 
 var db = make(map[string]string)
