@@ -2,7 +2,7 @@
 /UboxTool/bin
 /UboxTool/obj
 /UboxTool/publish
-/UboxClient/node_modules
+node_modules
 /UboxClient/dist
 .idea/
 .DS_Store

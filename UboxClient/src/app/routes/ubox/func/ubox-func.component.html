@@ -1,9 +1,0 @@
-<page-header [title]="'工具'"></page-header>
-<nz-card [nzBordered]="false">
-  <div class="my-md">
-      <form method="POST" enctype="multipart/form-data">  
-        <input type="file" (change)="uploadChange($event)" multiple="false" class="ml-sm" name="excel" id="excel_upload"/>
-        <button nz-button (click)="uploadBak()">上传备份数据, 覆盖数据库</button>
-    </form>
-  </div>
-</nz-card>
