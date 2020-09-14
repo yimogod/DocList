@@ -6,4 +6,4 @@
 /UboxClient/dist
 .idea/
 .DS_Store
-UboxServer/Server/bin/ubox
+/bin
