@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:UboxSearch"
         mc:Ignorable="d"
 		WindowStartupLocation="CenterScreen"
-        Title="联系人查找" Height="960" Width="1280">
+        Title="联系人查找" Height="960" Width="1280"
+		Initialized="Window_Initialized">
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="40"></RowDefinition>
