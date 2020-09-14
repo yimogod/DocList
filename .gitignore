@@ -1,9 +1,8 @@
-/UboxTool/.vs
-/UboxTool/bin
-/UboxTool/obj
-/UboxTool/publish
-node_modules
-/UboxClient/dist
+.vs
+obj/
+publish/
+node_modules/
+dist/
 .idea/
 .DS_Store
-/bin
+bin/
