@@ -1,0 +1,64 @@
+﻿<Window x:Class="Shelf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shelf"
+        xmlns:es="clr-namespace:Shelf.ExcelSearch"
+        mc:Ignorable="d"
+        Title="Shelf" MinHeight="640" Height="768" MinWidth="800" Width="1280" WindowStartupLocation="CenterScreen" Background="Black">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 最上面一行的信息 -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Image Source="/Asset/AppLogo.png" Width="32"/>
+            <Label Content="Shelf" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+
+        <Grid Grid.Row="1" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 左侧工具列表 -->
+            <StackPanel Grid.Column="0" VerticalAlignment="Top">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Margin" Value="0,8,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Background="Transparent" BorderThickness="0">
+                    <Button.Content>
+                        <Image Source="/Asset/Apps.png" Stretch="Uniform" Width="20"/>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Row="1" Background="Transparent" BorderThickness="0">
+                    <Button.Content>
+                        <Image Source="/Asset/Search01.png" Stretch="Uniform" Width="20"/>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Row="2" Background="Transparent" BorderThickness="0">
+                    <Button.Content>
+                        <Image Source="/Asset/Settings.png" Stretch="Uniform" Width="20"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+            <Canvas Grid.Column="1" Background="Aqua">
+                <es:ExcelSearch x:Name="ExcelSearchPanel"/>
+            </Canvas>
+        </Grid>
+    </Grid>
+</Window>
